@@ -1,6 +1,6 @@
 import { ErrorMessage, Field, Form, Formik, useFormik } from "formik";
 import React, { useEffect } from "react";
-import FormFeilderror from "./FormFeilderror";
+import FormFeildError from "./FormFeilderror";
 import * as Yup from "yup";
 
 const MyForm = () => {
@@ -36,16 +36,16 @@ const MyForm = () => {
           <Form>
             <label>FirstName :</label>
             <Field type="text" placeholder="firstName" name="firstName" />
-            <ErrorMessage name="firstName" />
+            <ErrorMessage name="firstName" component={FormFeildError}/>
             <label>LastName :</label>
             <Field type="text" placeholder="lastName" name="lastName" />
-            <ErrorMessage name="lastName" />
+            <ErrorMessage name="lastName" component={FormFeildError}/>
             <label>passWord :</label>
             <Field type="text" placeholder="password" name="password" />
-            <ErrorMessage name="password" />
+            <ErrorMessage name="password" component={FormFeildError}/>
             <label>email :</label>
             <Field type="text" placeholder="email" name="email" />
-            <ErrorMessage name="email" />
+            <ErrorMessage name="email" component={FormFeildError}/>
             <button type="submit">sing up</button>
           </Form>
         </Formik>

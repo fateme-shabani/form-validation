@@ -1,11 +1,11 @@
 import React from "react";
 
-const FormFeilderror = ({ msg }) => {
+const FormFeildError = ({ children }) => {
   return (
     <div>
-      <h6 style={{ color: "red", margin:'4px'}}>*{msg}</h6>
+      <h6 style={{ color: "red", margin: "4px" }}>*{children}</h6>
     </div>
   );
 };
 
-export default FormFeilderror;
+export default FormFeildError;
