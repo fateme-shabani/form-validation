@@ -5,10 +5,10 @@ import * as Yup from "yup";
 
 const MyForm = () => {
   const formFieled = {
-    firstName: undefined,
-    lastName: undefined,
-    password: undefined,
-    email: undefined,
+    firstName: '',
+    lastName: '',
+    password: '',
+    email: '',
   };
 
   const submitHandler = (values) => {
@@ -22,7 +22,7 @@ const MyForm = () => {
     email: Yup.string()
       .required("please enter email")
       .email("Your email is not valid"),
-    test: console.log("first"),
+    
   });
 
   return (
@@ -31,7 +31,7 @@ const MyForm = () => {
         <Formik
           initialValues={formFieled}
           onSubmit={submitHandler}
-          validate={validationSchema}
+          validationSchema={validationSchema}
         >
           <Form>
             <label>FirstName :</label>
